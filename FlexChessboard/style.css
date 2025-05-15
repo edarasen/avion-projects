@@ -1,0 +1,70 @@
+/*TYPE*/
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    background-color: lightgoldenrodyellow;
+}
+h1{
+    color: darkslategray;
+}
+/*CLASS*/
+.white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: whitesmoke;
+}
+.black{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: teal;
+}
+.piece-image{
+    height: 75%;
+    width: 75%;
+}
+/*ID*/
+#main{
+    text-align: center;
+}
+#chessboard{
+    border-radius: 12px;
+    background-color: darkslategray;
+}
+
+@media(max-aspect-ratio: 1/1){
+    #chessboard{
+        margin: auto;
+        padding: 14px;
+        width: 64vw;
+        display: grid;
+        grid-template-columns: repeat(8, 8vw);
+        grid-template-rows: repeat(8, 8vw);
+    }
+}
+@media(min-aspect-ratio: 1/1){
+    #chessboard{
+        margin: auto;
+        padding: 14px;
+        width: 64vh;
+        display: grid;
+        grid-template-columns: repeat(8, 8vh);
+        grid-template-rows: repeat(8, 8vh);
+    }
+}
+@media(aspect-ratio: 1/1){
+    #chessboard{
+        margin: auto;
+        padding: 14px;
+        width: 64vw;
+        display: grid;
+        grid-template-columns: repeat(8, 8vw);
+        grid-template-rows: repeat(8, 8vw);
+    }
+}

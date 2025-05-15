@@ -1,0 +1,68 @@
+/*TYPE*/
+body{
+    font-family: "Open-Sans", sans-serif;
+    color: #111;
+    background-image: url(https://t3.ftcdn.net/jpg/05/58/34/90/360_F_558349063_woZTZnN4EZzinsOGtfGUdYtln1bsh3MM.jpg);
+}
+h1{
+    font-family: "Meddon", cursive;
+    text-align: center
+}
+h2, h3, h4, h5, h6{
+    text-align: center;
+}
+div{
+    background-color: antiquewhite;
+    padding: 10px 80px;
+}
+a{
+    color: gray;
+    font-size: large;
+}
+
+/*CLASS*/
+.responsive-img{
+    width:75%
+}
+.img-container{
+    display: block;
+    text-align: center;
+}
+.small-img-caption{
+    font-size: small;
+}
+
+/*ID*/
+#nav{
+    position: sticky;
+    top: 0;
+    margin: -10px -80px; 
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+}
+#nav a{
+    display: block;
+    text-align: center;
+    padding: 20px 30px;
+    color: antiquewhite;
+    text-decoration: none;
+    float: left;
+    text-transform: uppercase;
+}
+#nav a:hover{
+    background-color: #111;
+}
+#main{
+    margin: 0px 50px;
+}
+#title{
+    font-family: "Meddon", cursive;
+    font-size: 48px;
+}
+#tribute-link{
+    text-align: center;
+}
+#tribute-info, #article{
+    text-align: justify;
+}

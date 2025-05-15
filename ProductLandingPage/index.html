@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Landing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main">
+            <header id="header"> <!--User 1-->
+                <div id="nav-bar" class="topnav"> <!--User 3-->
+                    <a href="#main">
+                        <img src="https://melvins-world.neocities.org/DiscoAssets/DELogo.png" alt="Disco Elysium Icon" class="nav-img">
+                    </a> <!--User 2-->
+                    <a href="#about" class="nav-link">ABOUT</a> <!--User 4, 5, 13-->
+                    <a href="#register" class="nav-link">REGISTER</a>
+                    <a href="#features" class="nav-link">FEATURES</a>
+                    <a href="#trailer" class="nav-link">TRAILER</a>
+                </div>
+            </header>
+            <div id="header-img-div">
+                <img id="header-img" src="https://melvins-world.neocities.org/DiscoAssets/DELogo.png" alt="Disco Elysium Logo">
+            </div>
+            <div id="about">
+                <div id="about-text-div">
+                    <h1>YOU ARE A DETECTIVE.</h1>
+                    <h3>About the game</h3>
+                    <p>
+                        You’re a detective with a unique skill system at your disposal and a whole city to carve your path across. Interrogate unforgettable characters, crack murders or take bribes. Become a hero or an absolute disaster of a human being.
+                        <br><br>
+                        The world is alive with real people, not extras. Ask probing questions, make insightful observations, or express your wildest desires as you play cop or something completely different. Disco Elysium's revolutionary dialogue system lets you do almost anything.
+                        <br><br>
+                        Explore, manipulate, collect tare, or become a millionaire in an open world unlike anything you've seen before. The city of Revachol is yours for the taking, one small piece at a time. From the streets to the beaches – and beyond.
+                        <br><br>
+                        Death, sex, taxes, and disco – nothing is off the table. Revachol is a real place with real challenges. Solve a massive murder investigation, or relax and kick back with sprawling side-cases. The detective decides, the citizens abide.
+                    </p>
+                </div>
+            </div>
+            <div id="register">
+                <div id="form-div">
+                    <h1 style="background-color: #111; color: white;">TIME TO GET TO WORK.</h1>
+                    <h3>Register below to keep up to date with news and announcements</h3>
+                    <form id="form" action="./static.html" method="POST"> <!--User 7-->
+                        <input type="email" id="email" placeholder="email@example.com" autocomplete="off" required> <!--User 8, 9, 10-->
+                        <input id="submit" type="submit" value="Submit"> <!--User 11-->
+                    </form>
+                </div>
+            </div>
+            <div id="features">
+                <div class="header-text-div">
+                    <h1>STOP. THINK. YOU CAN DETECT.</h1>
+                    <h3>Game Features</h3>
+                    <p>Disco Elysium remembers your choices and how you choose to solve problems. 
+                        <br><br>
+                        Your choices and dialogue options shape who you are. Select an archetype to play right away or mix and match from 24 wildly different skills. Develop your character even further with 60 wild ​thoughts ​to think – with the detective's Thought Cabinet.</p>
+                </div>
+                <div class="sub-header-div">
+                    <h2>Archetypes</h2>
+                </div>
+                <div id="archetype-gallery-div">
+                    <div class="archetype a">
+                        <img src="https://cdnb.artstation.com/p/assets/images/images/026/371/865/4k/aleksander-rostov-arc-logician.jpg?1588607543" class="gallery-img">
+                        <div class="archetype-description">
+                            <h2>Thinker</h2>
+                            <p>Extremely intelligent. Very bad with people. Knows interesting facts, comes up with original ideas.</p>
+                        </div>
+                        <div class="archetype-skill-array">
+                            <div class="light"><h1>5</h1><h3>int</h3></div>
+                            <div class="dark"><h1>1</h1><h3>psy</h3></div>
+                            <div class="light"><h1>2</h1><h3>fys</h3></div>
+                            <div class="dark"><h1>4</h1><h3>mot</h3></div>
+                        </div>
+                    </div>
+                    <div class="archetype b">
+                        <img src="https://cdna.artstation.com/p/assets/images/images/026/371/880/4k/aleksander-rostov-arc-sens.jpg?1588607560" class="gallery-img">
+                        <div class="archetype-description">
+                            <h2>Sensitive</h2>
+                            <p class="description">Very psychological. A  magnetic personality, but unstable. (Might begin to lose his mind.)</p>
+                        </div>
+                        <div class="archetype-skill-array">
+                            <div class="light"><h1>1</h1><h3>int</h3></div>
+                            <div class="dark"><h1>5</h1><h3>psy</h3></div>
+                            <div class="light"><h1>4</h1><h3>fys</h3></div>
+                            <div class="dark"><h1>2</h1><h3>mot</h3></div>
+                        </div>
+                    </div>
+                    <div class="archetype c">
+                        <img src="https://cdnb.artstation.com/p/assets/images/images/026/371/871/4k/aleksander-rostov-arc-physical.jpg?1588607552" class="gallery-img">
+                        <div class="archetype-description">
+                            <h2>Physical</h2>
+                            <p class="description">Extremely physical. Interacts with the world through his body. Gets things done, but dumb as a rock.</p>
+                        </div>
+                        <div class="archetype-skill-array">
+                            <div class="light"><h1>1</h1><h3>int</h3></div>
+                            <div class="dark"><h1>2</h1><h3>int</h3></div>
+                            <div class="light"><h1>5</h1><h3>fys</h3></div>
+                            <div class="dark"><h1>4</h1><h3>mot</h3></div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="sub-header-div">
+                    <h2>Skills</h2>
+                </div>
+                <div class="skills-gallery">
+                    <div class="gallery-header">
+                        <h3>Intellect</h3>
+                        <p>Logic. Encyclopedia. Rhetoric. Drama.  Conceptualization. Visual Calculus.</p>
+                    </div>
+                    <!--INTELLECT-->
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/2/29/Portrait_logic.png" alt="DE-Intellect-Logic" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/7/72/Portrait_encyclopedia.png" alt="DE-Intellect-Encyclopedia" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/7/7b/Portrait_rhetoric.png" alt="DE-Intellect-Rhetoric" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/2/28/Portrait_drama_rank1.png" alt="DE-Intellect-Drama" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/7/74/Portrait_conceptualization_rank1.png" alt="DE-Intellect-Conceptualization" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/f/f2/Portrait_visual-calculus_rank1.png" alt="DE-Intellect-Visual-Calculus" class="gallery-img">
+                    </div>
+                </div>
+                <div class="skills-gallery">
+                    <div class="gallery-header">
+                        <h3>Psyche</h3>
+                        <p>Volition. Inland Empire. Empathy. Authority. Esprit de Corps. Suggestion.</p>
+                    </div>
+                    <!--PSYCHE-->
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/8/83/Portrait_volition.png" alt="DE-Psyche-Volition" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/2/28/Portrait_inland-empire.png" alt="DE-Psyche-Inland-Empire" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/9/95/Portrait_empathy.png" alt="DE-Psyche-Empathy" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/4/43/Portrait_authority.png" alt="DE-Psyche-Authority" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/7/72/Portrait_esprit-de-Corps.png" alt="DE-Psyche-Esprit-De-Corps" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/e/e5/Portrait_suggestion.png" alt="DE-Psyche-Suggestion" class="gallery-img">
+                    </div>
+                </div>
+                <div class="skills-gallery">
+                    <div class="gallery-header">
+                        <h3>Physique</h3>
+                        <p>Endurance. Pain Threshold. Physical Instrument. Electrochemistry. Shivers. Half Light.</p>
+                    </div>
+                    <!--PHYSIQUE-->
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/0/03/Portrait_endurance.png" alt="DE-Physique-Endurance" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/7/75/Portrait_pain-threshold.png" alt="DE-Physique-Pain-Threshold" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/e/ea/Portrait_physical-instrument.png" alt="DE-Physique-Physical-Instrument" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/f/f9/Portrait_electrochemistry.png" alt="DE-Physique-Electrochemistry" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/2/2d/Portrait_shivers.png" alt="DE-Physique-Shivers" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/a/a0/Portrait_half-light.png" alt="DE-Physique-Half-Light" class="gallery-img">
+                    </div>
+                </div>
+                <div class="skills-gallery">
+                    <div class="gallery-header">
+                        <h3>Motorics</h3>
+                        <p>Hand/Eye Coordination. Perception. Reaction Speed. Savoir Faire. Interfacing. Composure.</p>
+                    </div>
+                    <!--Motorics-->
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/5/50/Portrait_he_coordination.png" alt="DE-Motorics-Hand-Eye-Coordination" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/5/56/Portrait_perception.png" alt="DE-Motorics-Perception" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/3/30/Portrait_reaction.png" alt="DE-Motorics-Reaction-Speed" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/8/8a/Portrait_savoir-faire.png" alt="DE-Motorics-Savoir-Faire" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/7/7d/Portrait_interfacing.png" alt="DE-Motorics-Interfacing" class="gallery-img">
+                    </div>
+                    <div class="skills-wrapper">
+                        <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/f/ff/Portrait_composure.png" alt="DE-Motorics-Composure" class="gallery-img">
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="sub-header-div">
+                    <h2>Thoughts</h2>
+                </div>
+                <div id="thoughts-gallery">
+                    <img src="https://cdn.prod.website-files.com/5a33f05fcb37b70001e76674/5daf08d83fc5ac5c8c9b5c02_20191016160432_1.jpg" alt="DE-Thought-Jamais-Vu">
+                    <img src="https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/0/06/DE_Thought_Locker.png" alt="DE-Thought-Cabinet-Screenshot">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5559da45e4b0f0ee9b7c4910/1572591850158-15TLBT21VY5RAARNJCOR/Disco+Elysium+Screenshot+2019.10.18+-+11.28.46.92.png" alt="DE-Thought-Inexplicable-Feminist-Agenda">
+                </div>
+            </div>
+            <div id="trailer"> <!--User 6-->
+                <div class="header-text-div">
+                    <h1>here it comes.</h1>
+                    <h3>official trailer</h3>
+                </div>
+                <iframe id="video" src="https://www.youtube.com/embed/ZHefk0w6F7c"></iframe>
+            </div>
+            <div id="footer">
+                <p>Copyright © 2019-2021 ZA/UM | All Rights Reserved</p>
+            </div>
+        </div>
+    </body>
+</html>

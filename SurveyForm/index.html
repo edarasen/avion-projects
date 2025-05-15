@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main">
+            <div id="title-div">
+                <figure>
+                    <img src="https://img.icons8.com/?size=100&id=VORi1lFdnvSL&format=png&color=000000" id="logo-image"/>
+                </figure>
+                <!-- User Story 1-->
+                <h1 id="title">Pizzeria Mama</h1>
+                <h2><em>A Cooking Time-Management Game</em></h2>
+            </div>
+    
+            <div id="description-div">
+                <h3>Gameplay Feedback Form</h3>
+                <br>
+                <!--User Story 2-->
+                <p id="description">
+                    Thank you for playing Pizzeria Mama!
+                    <br><br>
+                    The development team at Edarasen Gaming appreciates any feedback to make the game better in future updates. Follow our social media @edarasengaming for future announcements! 
+                </p>
+            </div>
+            
+            <div id="form-div">
+                <!--User Story 3-->
+                <form action="#" method="get" id="survey-form">
+                    <div id="basic-info-div">
+                        <!--User Story 4 || Name : Text Input-->
+                        <label for="name" id="name-label" class="required">Full Name:</label>
+                        <input type="text" id="name" placeholder="John Doe" autocomplete="off" required>
+                        <!--User Story 5, 6 || Email: Email Input-->
+                        <label for="email" id="email-label" class="required" title="Please enter a valid email address.">Email Address:</label>
+                        <input type="email" id="email" placeholder="asdf@inbox.com" autocomplete="off" required>
+                        <!--User Story 12 || Dropdown-->
+                        <label for="region" id="dropdown-label" class="required">Region:</label>
+                        <select name="region" id="dropdown">
+                            <option value="asia">Asia</option>
+                            <option value="africa">Africa</option>
+                            <option value="north-america">North America</option>
+                            <option value="europe">Europe</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                        <!--User Story 7, 8, 9 || Number : Text Input-->
+                        <label for="number" id="number-label" class="required">Hours Played</label>
+                        <input type="number" id="number" placeholder="8" min="0" max="2000" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <!--User Story 13 || Radio Buttons-->
+                        <fieldset>
+                            <legend class="required">Platform:</legend>
+                            <div class="selection-div">
+                                <input type="radio" id="pc" name="platform" value="pc"/>
+                                <label for="pc">PC</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="radio" id="switch" name="platform" value="switch"/>
+                                <label for="switch">Switch</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="radio" id="ps5" name="platform" value="ps5"/>
+                                <label for="ps5">Playstation 5</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="radio" id="xbox" name="platform" value="xbox"/>
+                                <label for="xbox">Xbox Series X</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="radio" id="mobile" name="platform" value="mobile"/>
+                                <label for="mobile">Mobile</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <!--User Story 14 || Checkboxes-->
+                        <fieldset>
+                            <legend class="required">Favorite Game Genre/s:</legend>
+                            <div class="selection-div">
+                                <input type="checkbox" id="action" name="genre" value="action"/>
+                                <label for="action">Action</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="action-adventure" name="genre" value="action-adventure"/>
+                                <label for="action-adventure">Action-adventure</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="adventure" name="genre" value="adventure"/>
+                                <label for="adventure">Adventure</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="puzzle" name="genre" value="puzzle"/>
+                                <label for="puzzle">Puzzle</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="role-playing" name="genre" value="role-playing">
+                                <label for="role-playing">Role-playing</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="simulation" name="genre" value="simulation"/>
+                                <label for="simulation">Simulation</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="strategy" name="genre" value="strategy"/>
+                                <label for="strategy">Strategy</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="sports" name="genre" value="sports"/>
+                                <label for="sports">Sports</label>
+                            </div>
+                            <div class="selection-div">
+                                <input type="checkbox" id="mmo" name="genre" value="mmo"/>
+                                <label for="mmo">MMO</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset id="range-fieldset">
+                            <legend class="required">On a scale of 1-4, how much did you enjoy the game?</legend>
+                            <p id="start-label">Hated it!</p>
+                            <input type="radio" id="hate" name="enjoy" value="hate"/>
+                            <label for="hate" id="hate-label">1</label>
+    
+                            <input type="radio" id="slight-hate" name="enjoy" value="slight-hate"/>
+                            <label for="slight-hate" id="slight-hate-label">2</label>
+                                
+                            <input type="radio" id="slight-love" name="enjoy" value="slight-love"/>
+                            <label for="slight-love" id="slight-love-label">3</label>
+                                
+                            <input type="radio" id="love" name="enjoy" value="love"/>
+                            <label for="love" id="love-label">4</label>
+                            
+                            <p id="end-label">Loved it!</p>
+                        </fieldset>
+                    </div>
+                    <div id="additional-comments-div">
+                        <!--User Story 15 || Description: Text Area-->
+                        <label for="additional">Comments and Suggestions: </label>
+                        <textarea id="additional-comments"  name="additional" rows="8" placeholder="Enter your comments here"></textarea>
+                    </div>
+                    <div>
+                        <!--User Story 16 || Submit-->
+                        <input id="submit" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

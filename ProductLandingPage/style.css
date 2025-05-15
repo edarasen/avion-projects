@@ -1,0 +1,299 @@
+/*TYPE*/
+body{
+    margin: 0;
+    background-color: #111;
+    color: #fff;
+}
+div{
+    background-color: #111;
+}
+h1, h2{
+    display: inline-block;
+    padding: 0.1em 1em;
+    background-color: #F1F1F1;
+    color: #111;
+    text-transform: uppercase;
+    font-family: "Noto Sans", sans-serif;
+}
+h3, h4, h5, h6{
+    text-transform: uppercase;
+    font-family: "Noto Sans", sans-serif;
+}
+p{
+    font-family: "Baskervville", serif;
+    font-size: 16px;
+}
+hr.solid {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    width: 70%;
+    border-top: 3px solid #bbb;
+}
+/*CLASS*/
+.topnav{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: center;
+}
+.topnav .icon{
+    display: none;
+}
+.sub-header-div{
+    text-align: center;
+}
+.nav-img{
+    display: block;
+    height: 54px;
+    padding: 1em 2em;
+}
+.nav-link{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 550;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 1em 2em;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    background-color: #90280F;
+}
+.gallery-img{
+    width: 90%;
+    padding: 1%;
+    background: lightgray;
+    margin: auto;
+}
+.archetype{
+    background-color: #111;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.archetype-description{
+    width: 70%;
+}
+.archetype-skill-array{
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.light{
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.dark{
+    text-align: center;
+    background-color: #111;
+}
+.light h1{
+    color: #111;
+    background-color: transparent;
+}
+.dark h1{
+    color:#f1f1f1;
+    background-color: transparent;
+}
+.light h3{
+    color: #111;
+    background-color: transparent;
+}
+.dark h3{
+    color:#f1f1f1;
+    background-color: transparent;
+}
+.header-text-div{
+    width: 70%;
+    text-align: center;
+    padding: 4em 2em;
+}
+.gallery-header{
+    grid-column: 1 / 7;
+    text-align: center;
+}
+.skills-gallery{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.5fr 1fr;
+}
+.skills-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+/*ID*/
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: auto;
+}
+#header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+}
+#header-img-div{
+    background-image: url(https://i.redd.it/ouo0vm6gn9f91.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+#header-img{
+    display: block;
+    margin: auto;
+    padding: 2%;
+    width: 45%;
+}
+#about{
+    width: 100%;
+    background-image: url(https://static.wikia.nocookie.net/discoelysium_gamepedia_en/images/9/93/Location_churchinterior.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: auto;
+    padding: 10% 0;
+    display: flex;
+    justify-content: flex-end;
+}
+#about-text-div{
+    background-color: #111111aa;
+    width: 40%;
+    padding: 2%;
+}
+#register{
+    padding: 4% 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #90280F;
+}
+#form-div{
+    background-color: transparent;
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+}
+#features{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#archetype-gallery-div{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+#thoughts-gallery{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+#trailer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2%;
+}
+#video{
+    padding: 2%;
+    width: 80vw;
+    height: 50vmin;
+}
+#form{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1%;
+    height: 50%;
+}
+#email{
+    text-align: center;
+    font-size: 16px;
+}
+#submit{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #111;
+}
+#footer{
+    padding: 2%;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-aspect-ratio: 1/1){
+    .skills-gallery{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    .gallery-header{
+        grid-column: 1 / 4;
+        text-align: center;
+    }
+    #archetype-gallery-div{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .topnav{
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: left;
+        align-items: center;
+    }
+     .nav-link{
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 550;
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        padding: 1em 2em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .archetype-skill-array{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #about{
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-text-div{
+        width: 80%;
+        padding: 2%;
+    }
+}

@@ -1,0 +1,155 @@
+/*TYPE*/
+body{
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    background-image: url(https://thumbs.dreamstime.com/b/pizza-seamless-pattern-vector-pizza-pattern-abstract-background-background-useful-restaurant-identity-packaging-89205632.jpghttps://thumbs.dreamstime.com/b/pizza-seamless-pattern-vector-pizza-pattern-abstract-background-background-useful-restaurant-identity-packaging-89205632.jpg);
+}
+div{
+    background-color: cornsilk;
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+}
+h1, h2, h3{
+    margin: 0;
+}
+form{
+    margin: auto;
+    padding: 0 10%;
+}
+label{
+    align-self: center;
+}
+input[type=text], input[type=email], input[type=number], select{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding : 10px;
+}
+fieldset{
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+textarea{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+/*CLASS*/
+.selection-div{
+    margin: 0;
+    padding: 3px 0;
+    text-align: left;
+}
+.required:after{
+    content:" *";
+    color: red;
+}
+/*ID*/
+#main{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+}
+#title-div{
+    margin: 0;
+    width: 100%;
+    color : cornsilk;
+    background-image: url(https://goodpizzagreatpizza.com/images/screens/gpgp_screen02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0, 0.6); /* Semi-transparent white color */
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 50px 0;
+}
+#logo-image{
+    width: 150px;
+}
+#title{
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+#description-div{
+    padding: 30px 0;
+}
+#description{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+#basic-info-div{
+    display: grid;
+    text-align: justify;
+    grid-auto-rows: 48px;
+}
+#range-fieldset{
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 0.25fr 0.25fr 0.25fr 1fr;
+    grid-template-rows: auto;
+    gap: 0 10px;
+    grid-template-areas:
+    "start-label hate-label slight-hate-label slight-love-label love-label end-label"
+    "start-label hate slight-hate slight-love love end-label";
+}
+#start-label{
+    grid-area: start-label;
+    text-align: right;
+}
+#end-label{
+    grid-area: end-label;
+    text-align: left;
+}
+#hate-label{
+    grid-area: hate-label;
+}
+#slight-hate-label{
+    grid-area: slight-hate-label;
+}
+#slight-love-label{
+    grid-area: slight-love-label;
+}
+#love-label{
+    grid-area: love-label;
+}
+#hate{
+    grid-area: hate;
+}
+#slight-hate{
+    grid-area: slight-hate
+}
+#slight-love{
+    grid-area: slight-love;
+}
+#love{
+    grid-area: love;
+}
+#additional-comments-div{
+    display: grid;
+    text-align: center;
+    grid-template-rows: 0.4fr 2.6fr;
+    gap: 8px 0;
+}
+#submit{
+    min-height: 50px;
+    min-width: 150px;
+    border-radius: 80px;
+    font-size: 18px;
+    border: 0 none;
+    color: white;
+    background-color: slateblue;
+}
