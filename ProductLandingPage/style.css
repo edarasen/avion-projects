@@ -21,7 +21,7 @@ h3, h4, h5, h6{
 }
 p{
     font-family: "Baskervville", serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 hr.solid {
     margin-top: 5%;
@@ -92,9 +92,6 @@ hr.solid {
     width: 70%;
 }
 .archetype-skill-array{
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: center; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -276,7 +273,27 @@ hr.solid {
         gap: 1%;
     }
 }
+@media screen and (max-width: 1280px) {
+    .archetype-skill-array{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
 @media screen and (max-width: 800px) {
+    #about{
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-text-div{
+        width: 80%;
+        padding: 2%;
+    }
+}
+@media screen and (max-width: 800px) {
+    p{
+        font-size: 16px;
+    }
     .topnav{
         gap: 5%;
     }
@@ -297,20 +314,5 @@ hr.solid {
     }
     .topnav-responsive a.responsive-nav-link{
         justify-self: left;
-    }
-}
-@media screen and (max-width: 800px) {
-    .archetype-skill-array{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-    #about{
-        flex-direction: column;
-        align-items: center;
-    }
-    #about-text-div{
-        width: 80%;
-        padding: 2%;
     }
 }
