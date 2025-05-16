@@ -32,21 +32,29 @@ hr.solid {
 /*CLASS*/
 .topnav{
     width: 100%;
+    padding: 0 2%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: left;
-    align-items: center;
+    gap: 2%;
 }
-.topnav .icon{
-    display: none;
+.topnav a{
+    display: flex;
+    justify-content: center;
 }
 .sub-header-div{
     text-align: center;
 }
 .nav-img{
-    display: block;
     height: 54px;
-    padding: 1em 2em;
+    overflow: hidden;
+    /* float: left; */
+    /* display: flex; */
+}
+.responsive-nav-img{
+    height: 54px;
+    overflow: hidden;
+    padding-right: 3%;
 }
 .nav-link{
     font-family: "Noto Sans", sans-serif;
@@ -58,6 +66,10 @@ hr.solid {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    /* float: left; */
+}
+.topnav a.responsive-nav-link{
+    display: none;
 }
 .nav-link:hover{
     background-color: #90280F;
@@ -145,16 +157,16 @@ hr.solid {
     top: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #111;
+    background-color: aqua;
 }
-#header-img-div{
+#banner-img-div{
     background-image: url(https://i.redd.it/ouo0vm6gn9f91.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
 }
-#header-img{
+#banner-img{
     display: block;
     margin: auto;
     padding: 2%;
@@ -264,25 +276,30 @@ hr.solid {
         gap: 1%;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .topnav{
-        width: 100%;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: left;
-        align-items: center;
+        gap: 5%;
     }
-     .nav-link{
-        font-family: "Noto Sans", sans-serif;
-        font-weight: 550;
-        font-size: 14px;
+    .topnav a:not(:first-child) + a{
+        display: none;
+    }
+    .topnav a.responsive-nav-link{
         display: block;
-        text-align: center;
-        padding: 1em 2em;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
     }
+    .topnav-responsive{
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2%;
+    }
+    .topnav-responsive a{
+        display: flex;
+        justify-content: center;
+    }
+    .topnav-responsive a.responsive-nav-link{
+        justify-self: left;
+    }
+}
+@media screen and (max-width: 800px) {
     .archetype-skill-array{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
