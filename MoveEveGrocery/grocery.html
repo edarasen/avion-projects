@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grocery Manager</title>
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .list-section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      color: #222;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .controls {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .list-display {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      padding: 10px;
+      margin-bottom: 8px;
+      background-color: #fdfdfd;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .item.selected {
+      background-color: #d0e6ff;
+      border-color: #339af0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- To-Buy Section -->
+    <div class="list-section">
+      <h2>🛒 To-Buy List</h2>
+      <div class="controls">
+        <button id="toBuyMoveDown">⬇️ Move Down</button>
+        <button id="toBuyMoveToFridge">Move to Fridge</button>
+      </div>
+      <div class="list-display">
+        <ul id="toBuyList" class="item-list"></ul>
+      </div>
+    </div>
+
+    <!-- In the Fridge Section -->
+    <div class="list-section">
+      <h2>🥶 In the Fridge</h2>
+      <div class="controls">
+        <button id="inFridgeMoveUp">⬆️ Move Up</button>
+        <button id="inFridgeMoveToBuy">Move to To-Buy</button>
+      </div>
+      <div class="list-display">
+        <ul id="inFridgeList" class="item-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

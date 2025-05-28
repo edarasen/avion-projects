@@ -4,7 +4,7 @@ body{
     background-color: #111;
     color: #fff;
 }
-div{
+div, nav{
     background-color: #111;
 }
 h1, h2{
@@ -31,16 +31,13 @@ hr.solid {
 }
 /*CLASS*/
 .topnav{
-    width: 100%;
-    padding: 0 2%;
-    display: flex;
-    flex-flow: row;
-    justify-content: left;
-    gap: 2%;
+    padding: 0.5% 2%;
 }
-.topnav a{
-    display: flex;
-    justify-content: center;
+.topnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 .sub-header-div{
     text-align: center;
@@ -48,15 +45,14 @@ hr.solid {
 .nav-img{
     height: 54px;
     overflow: hidden;
-    /* float: left; */
-    /* display: flex; */
+    float: left;
 }
 .responsive-nav-img{
     height: 54px;
     overflow: hidden;
     padding-right: 3%;
 }
-.nav-link{
+.topnav li .nav-link{
     font-family: "Noto Sans", sans-serif;
     font-weight: 550;
     font-size: 18px;
@@ -66,12 +62,16 @@ hr.solid {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    /* float: left; */
+    float: left;
+    margin: 0 1%;
 }
 .topnav a.responsive-nav-link{
     display: none;
 }
 .nav-link:hover{
+    background-color: #90280F59;
+}
+.active{
     background-color: #90280F;
 }
 .gallery-img{
@@ -90,6 +90,7 @@ hr.solid {
 }
 .archetype-description{
     width: 70%;
+    text-align: center;
 }
 .archetype-skill-array{
     display: grid;
@@ -130,9 +131,10 @@ hr.solid {
 }
 .skills-gallery{
     width: 90%;
+    padding: 2% 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.5fr 1fr;
+    /* grid-template-rows: 0.5fr 1fr; */
 }
 .skills-wrapper{
     display: flex;
@@ -140,6 +142,36 @@ hr.solid {
     align-items: center;
     font-size: 12px;
 }
+.topnav-responsive .nav-img{
+        height: 54px;
+        overflow: hidden;
+        float: none;
+}
+.topnav a.responsive-nav-link{
+    display: none;
+}
+.topnav-responsive ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.topnav-responsive a{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 550;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 1em 2em;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 1%;
+}
+.topnav-responsive a.responsive-nav-link{
+    justify-self: left;
+}
+
 /*ID*/
 #main{
     display: flex;
@@ -229,9 +261,8 @@ hr.solid {
     padding-bottom: 2%;
 }
 #video{
-    padding: 2%;
     width: 80vw;
-    height: 50vmin;
+    aspect-ratio: 16 / 9;
 }
 #form{
     background-color: transparent;
@@ -289,28 +320,40 @@ hr.solid {
         width: 80%;
         padding: 2%;
     }
-}
-@media screen and (max-width: 800px) {
     p{
         font-size: 16px;
     }
-    .topnav{
-        gap: 5%;
+    .nav-img{
+        height: 54px;
+        overflow: hidden;
+        float: none;
     }
-    .topnav a:not(:first-child) + a{
+    .topnav li:not(:first-child) + li{
         display: none;
     }
     .topnav a.responsive-nav-link{
         display: block;
-    }
-    .topnav-responsive{
-        flex-direction: column;
-        justify-content: center;
         padding: 0 2%;
+        float: left;
+    }
+    .topnav-responsive ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
     .topnav-responsive a{
         display: flex;
         justify-content: center;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 550;
+        font-size: 18px;
+        display: block;
+        text-align: center;
+        padding: 1em 2em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
     }
     .topnav-responsive a.responsive-nav-link{
         justify-self: left;

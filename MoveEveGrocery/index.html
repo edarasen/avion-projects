@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Move Image on Click</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: #f0f0f0;
+    }
+    .container {
+      background-color: blue;
+      height: 300px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    #movingImage {
+      position: relative;
+      left: 0;
+      cursor: pointer;
+      transition: left 0.2s ease;
+      width: 200px; /* Adjust image size */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./eve.png" id="movingImage" alt="Click Me!">
+  </div>
+</body>
+<script>
+    let movePosition = 0;
+    function moveRight(){
+        movePosition += 10;
+        this.style.left = `${movePosition}px`;
+    }
+    document.getElementById("movingImage").addEventListener("click", moveRight);
+</script>
+</html>
