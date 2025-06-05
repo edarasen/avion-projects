@@ -1,0 +1,299 @@
+:root{
+    --modal-background-color: #111111C0;
+    --background-color: #F4F4D3;
+    --text-color: #2A5513;
+}
+/*TYPE*/
+body{
+    font-family: "Domine", serif;
+    margin: 0;
+    background-color: var(--background-color);
+}
+h1, h2, h3, h4, h5, h6, p, li, span{
+    color : var(--text-color);
+}
+input{
+    font-family: "Domine", serif;
+}
+/*CLASS*/
+.hidden{
+    display: none;
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background-color);
+}
+.modal-content{
+    width: 40%;
+    margin: auto;
+    background-color: var(--background-color);
+    padding: 2%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+.strikeout{
+    text-decoration: line-through;
+}
+.todo-task span{
+    font-size: 1.25rem;
+}
+.todo-task{
+    margin-bottom: 0.5rem;
+}
+/*ID*/
+#body-main-flex{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+#x-modal{
+    width: 2rem;
+    align-self: flex-end;
+}
+::placeholder{
+    font-family: "Domine", serif;
+    color : var(--text-color);
+    opacity: 0.5;
+}
+#name{
+    background-color: transparent;
+    border-style: none;
+    color: var(--text-color);
+    text-align: center;
+}
+#name:focus{
+    outline: none;
+    border-bottom: 0.15rem solid var(--text-color);
+}
+#header{
+    width: 90%;
+    margin-top: 2rem;
+}
+#time-section{
+    text-transform: uppercase;
+    padding: 2%;
+    text-align: center;
+}
+#greeting-section{
+    text-transform: uppercase;
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+#display-mode-button{
+    height: 32px;
+    background-color: var(--background-color);
+    filter: drop-shadow(0px 3px 1.5px var(--text-color));
+    padding: 0.25rem;
+    border-radius: 100px;
+}
+#display-mode-button{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+#greeting{
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    font-kerning: 20px;
+}
+#time{
+    font-size: 1.75rem;
+    margin: 0;
+    font-weight: bold;
+}
+#focus-input-form{
+    border: 0.1rem dashed var(--text-color);
+    padding: 1.5%;
+}
+#focus{
+    background-color: transparent;
+    border-style: none;
+    color: var(--text-color);
+    text-align: center;
+    margin: auto 0;
+}
+#focus:focus{
+    outline: none;
+    border-bottom: 0.15rem solid var(--text-color);
+}
+#focus-section{
+    width: 100%;
+    text-align: center;
+}
+#focus-div
+{
+    background-color: var(--text-color);
+    padding: 1.5%;
+}
+#focus-div span{
+    color: var(--background-color);
+}
+#task-section{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#task-header-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+#task-header{
+    font-size: 1.5rem;
+    margin: 0;
+}
+#task-div{
+    border-left: 0.1rem dashed var(--text-color);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#task-input-form{
+    text-align: center;
+}
+#task{
+    width: 80%;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 0.1rem solid var(--text-color);
+    color: var(--text-color);
+    text-align: center;
+    margin: auto;
+    font-size: 1.25rem
+}
+#task:focus{
+    outline: none;
+    border-bottom: 0.1rem solid var(--text-color);
+}
+#task-ul{
+    list-style-type: none;
+    overflow: auto;
+    max-height: 20vmin;
+}
+#quote-section{
+    width: 80%;
+}
+#quote-input-form{
+    text-align: center;
+}
+#quote-div{
+    text-align: center;
+}
+#quote-div input{
+    width: 24px;
+}
+#quote{
+    width: 90%;
+    background-color: transparent;
+    border-style: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: center;
+    margin: auto 0;
+}
+#quote:focus{
+    outline: none;
+    border-bottom: 0.15rem solid var(--text-color);
+}
+#quote-text{
+    text-transform: none;
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.75;
+}
+/*MEDIA QUERIES*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .modal-content{
+        width: 80%;
+        padding: 4%;
+    }
+    #name{
+        font-size: 1.25rem;
+    }
+    #body-main-flex{
+        width: 90%;
+    }
+    #focus{
+        font-size: 1.5rem;
+    }
+    #focus-div span{
+        font-size: 1.5rem;
+    }
+    #greeting{
+        font-size: 1.25rem;
+    }
+    #task-section{
+        width: 80%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .modal-content{
+        width: 60%;
+        padding: 4%;
+    }
+    #name{
+        font-size: 1.75rem;
+    }
+    #body-main-flex{
+        width: 90%;
+    }
+    #focus{
+        font-size: 2rem;
+    }
+    #focus-div span{
+        font-size: 2rem;
+    }
+    #greeting{
+        font-size: 1.75rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .modal-content{
+        width: 40%;
+        padding: 2%;
+    }
+    #name{
+        font-size: 2rem;
+    }
+    #body-main-flex{
+        width: 60%;
+    }
+    #focus{
+        font-size: 2.25rem;
+    }
+    #focus-div span{
+        font-size: 2.25rem;
+    }
+    #greeting{
+        font-size: 2rem;
+    }
+}

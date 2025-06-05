@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Momentum App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main id="body-main-flex">
+            <div id="name-input-form-div" class="modal hidden">
+                <form id="name-input-form" class="modal-content">
+                <input id="x-modal" type="image" src="resources/light/x-icon.svg">
+                <h3>Welcome to your Momentum App</h3>
+                <input id="name" name="name" placeholder="What's your name?" autocomplete="off" type="text">
+                <p><em>Press [ Enter ] to Submit</em></p>
+            </form>
+            </div>
+            <header id="header">
+                <section id="time-section">
+                    <span id="time">00</span><br>
+                    <span id="date">wed</span>
+                </section>
+                <section id="greeting-section">
+                    <input id="display-mode-button" type="image" src="resources/light/moon-icon.svg">
+                    <span id="greeting">Hi!</span>
+                </section>
+            </header>
+
+            <section id="focus-section">
+                <form id="focus-input-form" class="hidden">
+                    <input id="focus" name="focus" type="text" placeholder="What's our focus today?">
+                </form>
+                <div id="focus-div" class="hidden">
+                    <span id="focus-text">focus here</span>
+                    <input id="focus-edit-button" type="image" src="resources/light/edit-focus-icon.svg">
+                </div>
+            </section>
+
+            <section id="task-section">
+                <section id="task-header-section">
+                    <span id="task-header">Task List</span>
+                    <input type="image" src="resources/light/add-icon.svg" id="add-task-button" >
+                </section>
+                <div id="task-div">
+                    <form id="task-input-form" class="hidden">
+                        <input id="task" name="task" type="text" placeholder="Add new task">
+                    </form>
+                    <ul id="task-ul">
+                    </ul>
+                </div>
+            </section>
+            <section class="header-section" id="quote-section">
+                <form id="quote-input-form" class="hidden">
+                    <input id="quote" name="quote" type="text" placeholder="Add new quote here">
+                </form>
+                <div id="quote-div">
+                    <h2 id="quote-text">quote here</h2>
+                    <input type="image" src="resources/light/add-icon.svg" id="add-quote-button">
+                    <input type="image" src="resources/light/reset-icon.svg" id="random-quote-button">
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>

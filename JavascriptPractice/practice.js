@@ -381,7 +381,7 @@ function findObjIndex(findObj, searchArray){
 displayHeroes();*/
 
 //press enter, on click
-const img = document.getElementById("img");
+/*const img = document.getElementById("img");
 const key = document.getElementById("key");
 img.addEventListener("click", function() {
     if (img.src === 'https://media.discordapp.net/attachments/1323722725155672105/1360834665161691277/187958c4-8e03-455f-bc70-1e89d8d0887b.png?ex=6837e30b&is=6836918b&hm=55de5e87ec5e8687c2eaefcdb1ab78e64ccc2451f7880a830a551777a869517f&=&format=webp&quality=lossless&width=930&height=930'){
@@ -395,4 +395,138 @@ document.addEventListener("keydown", (e) => {
     if(e.code === 'Enter'){
         key.textContent += `${e.code} `;
     }
-})
+})*/
+
+// Use an array of objects to store questions.
+// Each object should contain:
+// A question (string)
+// A choices array (3 options)
+// The correctAnswer (string or index)
+// Show one question at a time.
+// When the user selects an answer, move to the next question.
+// After the last question, show:
+// “You got X out of 3 correct!”
+// Allow restarting the quiz after completion.
+
+/*const question = document.getElementById('question');
+const choices = document.getElementById('choices');
+const progress = document.getElementById('progress');
+const restart = document.getElementById('restart');
+
+let questionIndex = 0;
+let rightAnswerCount = 0;
+
+const questionsArray =[
+    {question: 'What is 1 + 1?', choicesArray: ['1', '2', '0'], correctAnswer: 1},
+    {question: 'What is 3 + 4?', choicesArray: ['7', '8', '9'], correctAnswer: 0},
+    {question: 'What is 10 + 12?', choicesArray: ['21', '24', '22'], correctAnswer: 2}
+];
+
+window.addEventListener("load", loadNextQuestion);
+
+function loadNextQuestion(){
+    question.textContent = questionsArray[questionIndex].question;
+    choices.innerHTML = '';
+    questionsArray[questionIndex].choicesArray.forEach(displayChoice);
+    updateQuestionCount();
+}
+function displayChoice(choice){
+    var choiceButton = document.createElement("button");
+    choiceButton.textContent = choice;
+    choiceButton.addEventListener("click", function(){
+        checkAnswer(this);
+    })
+    choices.append(choiceButton);
+}
+function checkAnswer(choiceButton){
+    const answerArray = questionsArray[questionIndex].choicesArray;
+    const rightAnswerIndex = questionsArray[questionIndex].correctAnswer;
+    var choiceText = choiceButton.textContent;
+    if( answerArray.indexOf(choiceText) === rightAnswerIndex ){
+        rightAnswerCount++;
+    }
+    questionIndex++;
+    if(questionIndex < questionsArray.length)
+    {
+        loadNextQuestion();
+    }
+    else{
+        questionIndex = questionsArray.length-1;
+        choices.style.display = 'none';
+        progress.style.display = 'none';
+        showFinalScore();
+    }
+}
+function updateQuestionCount(){
+    progress.textContent = `Question ${questionIndex+1} of ${questionsArray.length}`;
+}
+function showFinalScore(){
+    question.textContent = `You got ${rightAnswerCount} out of ${questionsArray.length} correct!`
+    restart.style.display = 'block';
+}
+
+restart.addEventListener('click', restartQuiz);
+
+function restartQuiz(){
+    questionIndex = 0;
+    rightAnswerCount = 0;
+    loadNextQuestion();
+    restart.style.display = 'none';
+    choices.style.display = 'inline';
+    progress.style.display = 'block';
+}*/
+
+/*function addressMaker(city, street){
+    country = 'Philippines';
+    var newAddress = {city, street, country};
+    return newAddress;
+}
+const testAddress = addressMaker('Quezon','OrtigasAvenue');
+var {city, street, country} = testAddress;
+console.log(`${city}, ${street}. ${country}`);*/
+
+/*const students = [
+    {name : 'Manny', city : 'Manila'},
+    {name : 'Jose', city : 'Intramuros'},
+    {name : 'Ana', city : 'Mandaluyong'}
+];
+
+for (const student of students){
+    var{name, city} = student;
+    console.log(`${name} lives in ${city}`);
+}*/
+
+/*function buyFromStore(food = 'something'){
+    console.log(`I'm going to buy ${food} from the store`); 
+}
+buyFromStore('chicharon');
+buyFromStore();*/
+
+/*class Player{
+    constructor (name, country){
+        this.name = name;
+        this.country = country;
+    }
+
+    playerCountry(){
+        console.log(`${this.name} is from ${this.country}`);
+    }
+}
+
+class BasketballPlayer extends Player{
+    constructor(name, country, age){
+        super(name, country);
+        this.age = age;
+    }
+    basketballPlayerAge(){
+        console.log(`${this.name} is ${this.age} years old and knows how to play basketball`);
+    }
+}
+
+var red = new Player('Red', 'The Country');
+red.playerCountry();
+
+var zagreus = new BasketballPlayer('Zagreus', 'House of Hades', 300);
+zagreus.playerCountry();
+zagreus.basketballPlayerAge();*/
+
