@@ -31,9 +31,18 @@ function checkSessionStorage(){
         darkMode = (sessionStorage.getItem("darkMode") === 'true');
         updateDarkMode(darkMode);
     }
+    if(sessionStorage.getItem("taskListArray")){
+        taskListArray = sessionStorage.getItem("taskListArray").split(',');
+        updateTaskUl();
+    }
+    if(sessionStorage.getItem("struckTaskListArray")){
+        struckTaskListArray = sessionStorage.getItem("struckTaskListArray").split(',');
+        updateTaskUl();
+    }
 }
 
 //US 1 : I WANT TO PUT MY NAME ON THE HOMEPAGE
+//INPUT TYPE HIDDEN
 const nameInputFormDiv = document.getElementById('name-input-form-div');
 
 let username;
@@ -177,6 +186,7 @@ focusEditButton.addEventListener("click", function(e){
 });
 
 //US 5 : I WANT TO SEE A RANDOM QUOTE
+
 const quoteInputFormDiv = document.getElementById('quote-input-form');
 const quoteDiv = document.getElementById(`quote-div`);
 
@@ -239,13 +249,14 @@ const taskDiv = document.getElementById('task-div');
 const taskUl = document.getElementById('task-ul');
 
 let taskListArray = [];
-let struckTaskListArrray = [];
+let struckTaskListArray = [];
 let taskListCheckBoxes = [];
 
 function saveTaskInput(event){
     event.preventDefault();
     task = document.forms['task-input-form']['task'].value;
     taskListArray.push(task);
+    sessionStorage.setItem('taskListArray', taskListArray);
     updateTaskUl();
 }
 
@@ -265,7 +276,7 @@ function updateTaskUl(){
         taskLi.append(taskSpan);
         taskUl.append(taskLi);
     }
-    for(var i=0; i < struckTaskListArrray.length; i++){
+    for(var i=0; i < struckTaskListArray.length; i++){
         const taskLi = document.createElement('li');
         taskLi.classList.add('todo-task');
         taskLi.classList.add('strikeout');
@@ -276,7 +287,7 @@ function updateTaskUl(){
         taskListCheckBoxes.push(taskCheckBox);
         taskCheckBox.setAttribute
         const taskSpan = document.createElement('span');
-        taskSpan.textContent = struckTaskListArrray[i];
+        taskSpan.textContent = struckTaskListArray[i];
         taskLi.append(taskCheckBox);
         taskLi.append(taskSpan);
         taskUl.append(taskLi);
@@ -321,16 +332,33 @@ function toggleStrikeOutTask(){
     var listObjectsArray = document.querySelectorAll('.todo-task');
     if(listObjectsArray[listIndex].classList.contains('strikeout')){
         var struck = listIndex - taskListArray.length;
-        var struckLiContent = struckTaskListArrray.splice(struck, 1);
+        var struckLiContent = struckTaskListArray.splice(struck, 1);
         taskListArray.push(struckLiContent[0]);
     }
     else
     {
         var liContent = taskListArray.splice(listIndex, 1);
-        struckTaskListArrray.push(liContent[0]);
+        struckTaskListArray.push(liContent[0]);
 
     }
     listObjectsArray[listIndex].classList.toggle('strikeout');
+    sessionStorage.setItem('taskListArray', taskListArray);
+    sessionStorage.setItem('struckTaskListArray', struckTaskListArray);
+    updateTaskUl();
+}
+
+// ADDTL : I WANT TO DELETE MY TO DO LIST
+const deleteListButton = document.getElementById('delete-list-button');
+deleteListButton.addEventListener("click", function(){
+    deleteToDoList();
+});
+
+function deleteToDoList(){
+    taskListArray = [];
+    struckTaskListArray = [];
+    taskListCheckBoxes = [];
+    sessionStorage.setItem('taskListArray', taskListArray);
+    sessionStorage.setItem('struckTaskListArray', struckTaskListArray);
     updateTaskUl();
 }
 
@@ -354,6 +382,7 @@ function updateDarkMode(darkModeBool){
         document.getElementById('add-task-button').src = 'resources/dark/add-icon.svg';
         document.getElementById('add-quote-button').src = 'resources/dark/add-icon.svg';
         document.getElementById('random-quote-button').src = 'resources/dark/reset-icon.svg';
+        document.getElementById('delete-list-button').src = 'resources/dark/trash-icon.svg';
     }
     else{
         cssRoot.style.setProperty('--background-color', '#F4F4D3');
@@ -364,6 +393,7 @@ function updateDarkMode(darkModeBool){
         document.getElementById('add-task-button').src = 'resources/light/add-icon.svg';
         document.getElementById('add-quote-button').src = 'resources/light/add-icon.svg';
         document.getElementById('random-quote-button').src = 'resources/light/reset-icon.svg';
+        document.getElementById('delete-list-button').src = 'resources/light/trash-icon.svg';
     }
     changeTaskButtonIcon();
 }
