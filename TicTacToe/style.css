@@ -1,0 +1,177 @@
+:root{
+    --background-color: cornsilk;
+    --text-color: #EED9C4;
+    --modal-background-color: #111111C0;
+    --hover-color: #F1E9D2;
+    --x-background-color: #D3D3FF;
+    --o-background-color: #ADEBB3;
+    --win-border-color: #4A4A4A;
+}
+body{
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/078/835/564/large/diana-lisiecka-grassland.jpg?1723203714');
+    background-size: cover;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--win-border-color);
+}
+
+.hidden{
+    display: none;
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background-color);
+}
+.modal-content{
+    width: 40%;
+    margin: auto;
+    background-color: var(--background-color);
+    padding: 2%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+.modal-button{
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 0.15rem solid var(--text-color);
+    width: 20%;
+}
+.single-box{
+    border-radius: 1rem;
+    border: 0.15rem solid var(--text-color);
+}
+.single-box:hover, .modal-button:hover{
+    background-color: var(--hover-color);
+}
+.win{
+    border: 0.25rem solid var(--win-border-color);
+}
+.x{
+    background-image: url('Resources/bird-x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--x-background-color);
+}
+.o{
+    background-image: url('Resources/bird-o.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--o-background-color);
+}
+.rnp-button{
+    font-size: 1rem;
+    color: #4A4A4A;
+    background-color: transparent;
+    border-color: transparent;
+    width: 4rem;
+}
+#main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--background-color);
+    margin: 0 auto;
+    opacity: 90%;
+}
+#header{
+    text-align: center;
+    background-color: var(--hover-color);
+    width: 100%;
+    padding: 0.35rem 0;
+}
+#modal-button-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+#tictactoe-box{
+    width: 54vmin;
+    height: 54vmin;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    padding: 0.25rem;
+
+}
+#button-section{
+    display: grid;
+    grid-template-columns: 4rem 4rem 4rem;
+    grid-template-areas: "previous-button restart-button next-button";
+    justify-content: center;
+    align-content: center;
+    gap: 1.15rem;
+    width: 40%;
+}
+#previous-button{
+    grid-area: previous-button;
+}
+#restart-button{
+    grid-area: restart-button;
+}
+#next-button{
+    grid-area: next-button;
+}
+#footer{
+    text-align: center;
+    width: 100%;
+    padding: 0.35rem 0;
+}
+#joke-setup{
+    font-weight: bold;
+}
+#joke-punchline{
+    font-style: italic;
+}
+
+/*MEDIA QUERIES*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .modal-content{
+        width: 80%;
+        padding: 4%;
+    }
+    #main{
+        width: 90%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .modal-content{
+        width: 60%;
+        padding: 4%;
+    }
+    #main{
+        width: 90%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .modal-content{
+        width: 40%;
+        padding: 2%;
+    }
+    #main{
+        width: 60%;
+    }
+}

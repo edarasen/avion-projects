@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tweet Tac Toe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main id="main">
+            <section id="first-player-section" class="modal">
+                <div class = "modal-content">
+                    <h1>Who should play first?</h1>
+                    <section id="modal-button-section">
+                        <input class="modal-button" id="x-button" type="image" src="Resources/bird-x.png">
+                        <input class="modal-button" id="o-button" type="image" src="Resources/bird-o.png">
+                    </section>
+                </div>
+            </section>
+            <header id="header">
+                <!-- Title -->
+                <h1 id="title">TWEET TAC TOE</h1>
+                <!-- Turn Indicator Text -->
+                <h2 id="turn-indicator-text">Whose turn is it?</h2>
+            </header>
+            <section id="tictactoe-box">
+                <!-- ROW 1 -->
+                <div class="single-box"></div>
+                <div class="single-box"></div>
+                <div class="single-box"></div>
+                <!-- ROW 2 -->
+                <div class="single-box"></div>
+                <div class="single-box"></div>
+                <div class="single-box"></div>
+                <!-- ROW 3 -->
+                <div class="single-box"></div>
+                <div class="single-box"></div>
+                <div class="single-box"></div>
+            </section>
+            <section id="button-section">
+                <!-- Restart / Next / Previous Buttons -->
+                <button id="previous-button" class="rnp-button hidden"><img src="Resources/previous-icon.svg"><br>Previous</button>
+                <button id="restart-button" class="rnp-button"><img src="Resources/restart-icon.svg"><br>Restart</button>
+                <button id="next-button" class="rnp-button hidden"><img src="Resources/next-icon.svg"><br>Next</button>
+            </section>
+            <footer id="footer">
+                <!-- Random Joke ; Refreshes every 10 secs -->
+                <span id="joke-setup"></span>
+                <br>
+                <span id="joke-punchline"></span>
+            </footer>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>

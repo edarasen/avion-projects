@@ -530,3 +530,158 @@ var zagreus = new BasketballPlayer('Zagreus', 'House of Hades', 300);
 zagreus.playerCountry();
 zagreus.basketballPlayerAge();*/
 
+/*class Question{
+    constructor(question, answersArray, correctAnswer){
+        this.question = question;
+        this.answersArray = answersArray;
+        this.correctAnswer = correctAnswer;
+    }
+
+    askQuestion(){
+        console.log(this.question);
+        this.answersArray.forEach(displayAnswer);
+    }
+}
+function displayAnswer(answer, index, array){
+    array[index] = answer;
+    console.log(`${index+1}.) ${answer}`);
+}
+const quizQuestions = [
+    new Question("What is 22+2?", ['22', '24', '25'], 1),
+    new Question("What is 24+2?", ['26', '28', '30'], 0),
+    new Question("What is 2+2?", ['2', '3', '4'], 2),
+    new Question("What is 4+2?", ['6', '8', '10'], 0),
+    new Question("What is 9+2?", ['12', '11', '10'], 1)
+]
+var score = 0;
+function startQuiz(){
+    console.log('===');
+    var index = Math.floor(Math.random()*quizQuestions.length);
+    quizQuestions[index].askQuestion();
+    var input = prompt(quizQuestions[index].question);
+    if(input == `${quizQuestions[index].correctAnswer+1}`){
+        console.log('correct');
+        score++;
+    }
+    else if(input === 'x'){
+        console.log('Quiz End');
+        console.log(`final score : ${score}`);
+        score = 0;
+        return;
+    }
+    else{
+        console.log('incorrect');
+    }
+    console.log(`score : ${score}`);
+    startQuiz();
+}*/
+/*var Book = function(title, quantity, value){
+    this.title = title;
+    this.quantity = quantity;
+    this.value = value;
+}
+var Store = function(storeName, inventoryList = [], earnings = 0){
+    this.storeName = storeName;
+    this.inventoryList = inventoryList;
+    this.earnings = earnings;
+    
+    this.addBook = function(title, quantity, value){
+        let bookIndex = this.restockBook(title, quantity);
+        if(bookIndex === false){
+            this.inventoryList.push(
+                new Book(title, quantity, value)
+            );
+        }
+    }
+    this.restockBook = function(title, quantity){
+        let bookIndex;
+        for(let i = 0; i < this.inventoryList.length; i++){
+            let book = this.inventoryList[i];
+            if(book.title === title){
+                bookIndex = i;
+            }
+        }
+        if(bookIndex > -1){
+            this.inventoryList[bookIndex].quantity += quantity;
+            console.log('restock successful');
+            return true;
+        }
+        else{
+            console.log('no stock found');
+            return false;
+        }
+    }
+    this.sellBook = function(title, quantity){
+        for(let i = 0; i < this.inventoryList.length; i++){
+            let book = this.inventoryList[i];
+            if(book.title === title){
+                if(book.quantity >= quantity){
+                    book.quantity -= quantity;
+                    this.earnings += book.value*quantity;
+                    console.log(`Successful Transaction : ${this.earnings}`);
+                }
+                else{
+                    console.log(`${title} only has ${book.quantity} left`);
+                }
+                return;
+            }
+        }
+        console.log(`${title} is out of stock.`);
+    }
+    this.totalEarnings = function(){
+        console.log(`Earnings : ${this.earnings}`);
+    }
+    this.listInventory = function(){
+        console.log(this.inventoryList);
+    }
+}
+
+var newStore = new Store('FullyBooked');
+newStore.addBook('test', 12, 100);
+newStore.listInventory();
+newStore.sellBook('test', 1);
+newStore.listInventory();
+newStore.sellBook('test', 12);
+newStore.sellBook('test', 11);
+newStore.totalEarnings();
+newStore.addBook('test', 14, 100);
+newStore.listInventory();*/
+
+class Chest{
+    constructor(){
+        this.map = new Map();
+    }
+    addItem(itemName, quantity){
+        if(this.map.get(itemName) !== undefined){
+            var newQuantity = this.map.get(itemName) + quantity;
+            this.map.set(itemName, newQuantity);
+        }
+        else{
+            this.map.set(itemName, quantity);
+        }
+    }
+    removeItem(itemName, quantity){
+        if(this.map.get(itemName) >= quantity){
+            var newQuantity = this.map.get(itemName) - quantity;
+            this.map.set(itemName, newQuantity);
+        }
+        var zeroQuantity = [];
+        for(const itemKey of this.map.keys()){
+            if(this.map.get(itemName) <= 0){
+                zeroQuantity.push(itemName);
+            }
+        }
+        for(const itemName of zeroQuantity){
+            this.map.delete(itemName);
+        }
+    }
+    listItems(){
+        for (const item of this.map.entries()){
+            console.log(item);
+        }
+    }
+    hashItem(itemName){
+        if(this.map.get(itemName)){ return true; }
+        else { return false; }
+    }
+}
